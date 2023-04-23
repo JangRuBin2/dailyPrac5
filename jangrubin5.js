@@ -22,28 +22,35 @@ const currency = {
 // 우리 학원 휴게실에 있는 자판기에 들어있는 음료슈의 정보를 담은 배열입니다.
 // 아래의 exampleOne()은 임의의 돈에대해 얼마짜리를 넣었는지 확인 할 수 있께 로직을 구성 합니다.
 function exampleOne(inputPrice, currency, basicData) {
-  // Q1. 넣은 금액에 맞게 currency.thousand.name을 반환하여
-  // 금액을 넣었다는 문구를 console.log를 통해 제작하세요
-  // Q2. 만약 넣은 금액이 1천원일때 basicData를 통해 구매가능한 상품을
-  // console.log에 출력하세요
-  // Q3. 만약 넣은 금액이 모든 제품의 가격보다 적다면 잔액이 부족하다는 문구출력
+  
+  
+ 
   // Q4. 만약 넣은 금액이 제품 가격보다 많다면 당신은 부자라는 문구 출력
 //  console.log(currency.thousand.name)
 //  가격 출력
 let currencyName = Object.values(currency).map(money => money.name)
 let currencyValue = Object.values(currency).map(obj => obj.value)
-
+// Q1. 넣은 금액에 맞게 currency.thousand.name을 반환하여
+  // 금액을 넣었다는 문구를 console.log를 통해 제작하세요
 // for(let i=0; i<currencyValue.length; i++) {
 //   if(inputPrice === currencyValue[i]) {
 //     // console.log(currencyName[i])
 //     return console.log(currencyName[i] + "원을 넣었습니다")
 //   } 
 // }
-for(let i=0; i<basicData.length; i++) {
- if(inputPrice >=basicData[i].price) {
-  console.log(basicData[i].name + "구매 가능합니다")
- }
-}
+// Q2. 만약 넣은 금액이 1천원일때 basicData를 통해 구매가능한 상품을
+  // console.log에 출력하세요
+// for(let i=0; i<basicData.length; i++) {
+//  if(inputPrice >=basicData[i].price) {
+//   console.log(basicData[i].name + "구매 가능합니다")
+//  }
+// } 
+ // Q3. 만약 넣은 금액이 모든 제품의 가격보다 적다면 잔액이 부족하다는 문구출력
+ for(let i=0; i<basicData.length; i++) {
+ if(inputPrice < basicData[i].price) {
+  console.log("잔액이 부족합니다")
+  break;
+ }}
 //  console.log(currencyName)
 //  console.log(currencyValue)
 
@@ -52,4 +59,4 @@ for(let i=0; i<basicData.length; i++) {
 
 
 }
-exampleOne(1000,currency,basicData)
+exampleOne(200,currency,basicData)
