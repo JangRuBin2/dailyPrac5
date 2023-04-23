@@ -25,8 +25,7 @@ function exampleOne(inputPrice, currency, basicData) {
   
   
  
-  // Q4. 만약 넣은 금액이 제품 가격보다 많다면 당신은 부자라는 문구 출력
-//  console.log(currency.thousand.name)
+
 //  가격 출력
 let currencyName = Object.values(currency).map(money => money.name)
 let currencyValue = Object.values(currency).map(obj => obj.value)
@@ -53,10 +52,15 @@ let currencyValue = Object.values(currency).map(obj => obj.value)
  }}
 //  console.log(currencyName)
 //  console.log(currencyValue)
-
-
- 
-
-
+  // Q4. 만약 넣은 금액이 제품 가격보다 많다면 당신은 부자라는 문구 출력
+//  console.log(currency.thousand.name)
+let totalPrice = 0;
+for(let i=0; i<basicData.length; i++) {
+  totalPrice += basicData[i].price
 }
-exampleOne(200,currency,basicData)
+console.log(totalPrice)
+if(inputPrice > totalPrice) {
+  console.log("당신은 부자입니다")
+}
+}
+exampleOne(2022220,currency,basicData)
