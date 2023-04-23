@@ -24,4 +24,10 @@ const currency = {
 function exampleOne(inputPrice, currency, basicData) {
   // Q1. 넣은 금액에 맞게 currency.thousand.name을 반환하여
   // 금액을 넣었다는 문구를 console.log를 통해 제작하세요
+  // Q2. 만약 넣은 금액이 1천원일때 basicData를 통해 구매가능한 상품을
+  // console.log에 출력하세요
+  // Q3. 만약 넣은 금액이 모든 제품의 가격보다 적다면 잔액이 부족하다는 문구출력
+  // Q4. 만약 넣은 금액이 제품 가격보다 많다면 당신은 부자라는 문구 출력
+  console.log(currency)
 }
+exampleOne()
