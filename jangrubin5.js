@@ -40,8 +40,8 @@ let currencyValue = Object.values(currency).map(obj => obj.value)
 //   } 
 // }
 for(let i=0; i<basicData.length; i++) {
- if(inputPrice >=basicData[0].price) {
-  console.log("gk")
+ if(inputPrice >=basicData[i].price) {
+  console.log(basicData[i].name + "구매 가능합니다")
  }
 }
 //  console.log(currencyName)
@@ -52,4 +52,4 @@ for(let i=0; i<basicData.length; i++) {
 
 
 }
-exampleOne(500,currency,basicData)
+exampleOne(1000,currency,basicData)
