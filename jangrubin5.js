@@ -28,6 +28,24 @@ function exampleOne(inputPrice, currency, basicData) {
   // console.log에 출력하세요
   // Q3. 만약 넣은 금액이 모든 제품의 가격보다 적다면 잔액이 부족하다는 문구출력
   // Q4. 만약 넣은 금액이 제품 가격보다 많다면 당신은 부자라는 문구 출력
-  console.log(currency)
+//  console.log(currency.thousand.name)
+//  가격 출력
+let currencyName = Object.values(currency).map(money => money.name)
+let currencyValue = Object.values(currency).map(obj => obj.value)
+
+for(let i=0; i<currencyValue.length; i++) {
+  if(inputPrice === currencyValue[i]) {
+    // console.log(currencyName[i])
+    return console.log(currencyName[i] + "원을 넣었습니다")
+  } 
 }
-exampleOne()
+
+//  console.log(currencyName)
+//  console.log(currencyValue)
+
+
+ 
+
+
+}
+exampleOne(500,currency,basicData)
